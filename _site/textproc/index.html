@@ -1,0 +1,1037 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.9.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="pt" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Text Processing - Filipe Wanderly</title>
+<meta name="description" content="Feature Engineering, Data Science, Text Processing">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Filipe Wanderly">
+<meta property="og:title" content="Text Processing">
+<meta property="og:url" content="http://localhost:4000/textproc/">
+
+
+  <meta property="og:description" content="Feature Engineering, Data Science, Text Processing">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-08-01T00:00:00-03:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/textproc/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Filipe Wanderly",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Filipe Wanderly Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="http://localhost:4000/">Filipe Wanderly</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/about/" >About</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/data-projects/" >Projects</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="http://localhost:4000/images/bio-pic-2.jpg" alt="Filipe Wanderly" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Filipe Wanderly</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Data Science Portfolio
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Acompanhe em</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">São Paulo, SP - Brazil</span>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:filipewds@hotmail.com">
+            <meta itemprop="email" content="filipewds@hotmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.facebook.com/filipewds" itemprop="sameAs">
+            <i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/filipewds" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/filipewds" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Text Processing">
+    <meta itemprop="description" content="Feature Engineering, Data Science, Text Processing">
+    <meta itemprop="datePublished" content="August 01, 2020">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Text Processing
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minuto(s) de leitura
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">nltk</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span><span class="p">,</span> <span class="n">words</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">RegexpTokenizer</span>
+<span class="kn">from</span> <span class="nn">nltk.stem</span> <span class="kn">import</span> <span class="n">WordNetLemmatizer</span>
+<span class="kn">from</span> <span class="nn">nltk.stem.porter</span> <span class="kn">import</span> <span class="n">PorterStemmer</span>
+
+<span class="k">def</span> <span class="nf">freq</span><span class="p">(</span><span class="n">var</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">bins</span> <span class="o">!=</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">var</span><span class="p">.</span><span class="n">dtype</span> <span class="o">!=</span> <span class="s">'object'</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">concat</span><span class="p">([</span>
+            <span class="n">var</span><span class="p">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">),</span>
+            <span class="n">var</span><span class="p">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="bp">True</span><span class="p">).</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s">'{:.1%}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">concat</span><span class="p">([</span>
+            <span class="n">var</span><span class="p">.</span><span class="n">value_counts</span><span class="p">(),</span>
+            <span class="n">var</span><span class="p">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="bp">True</span><span class="p">).</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s">'{:.1%}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    
+    <span class="n">df</span><span class="p">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Frequency'</span><span class="p">,</span> <span class="s">'Percentage'</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">df</span>
+
+<span class="k">def</span> <span class="nf">remove_string_special_characters</span><span class="p">(</span><span class="n">s</span><span class="p">):</span> 
+      
+    <span class="c1"># removes special characters with ' ' 
+</span>    <span class="n">stripped</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">sub</span><span class="p">(</span><span class="s">'[^a-zA-z\s]'</span><span class="p">,</span> <span class="s">''</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span> 
+    <span class="n">stripped</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">sub</span><span class="p">(</span><span class="s">'_'</span><span class="p">,</span> <span class="s">''</span><span class="p">,</span> <span class="n">stripped</span><span class="p">)</span> 
+      
+    <span class="c1"># Change any white space to one space 
+</span>    <span class="n">stripped</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">sub</span><span class="p">(</span><span class="s">'\s+'</span><span class="p">,</span> <span class="s">' '</span><span class="p">,</span> <span class="n">stripped</span><span class="p">)</span> 
+      
+    <span class="c1"># Remove start and end white spaces 
+</span>    <span class="n">stripped</span> <span class="o">=</span> <span class="n">stripped</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span> 
+    
+    <span class="k">return</span> <span class="n">stripped</span><span class="p">.</span><span class="n">lower</span><span class="p">()</span> 
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"./DataAnalyst.csv"</span><span class="p">)</span>
+<span class="n">df</span><span class="p">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>Job Title</th>
+      <th>Salary Estimate</th>
+      <th>Job Description</th>
+      <th>Rating</th>
+      <th>Company Name</th>
+      <th>Location</th>
+      <th>Headquarters</th>
+      <th>Size</th>
+      <th>Founded</th>
+      <th>Type of ownership</th>
+      <th>Industry</th>
+      <th>Sector</th>
+      <th>Revenue</th>
+      <th>Competitors</th>
+      <th>Easy Apply</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>Data Analyst, Center on Immigration and Justic...</td>
+      <td>$37K-$66K (Glassdoor est.)</td>
+      <td>Are you eager to roll up your sleeves and harn...</td>
+      <td>3.2</td>
+      <td>Vera Institute of Justice\n3.2</td>
+      <td>New York, NY</td>
+      <td>New York, NY</td>
+      <td>201 to 500 employees</td>
+      <td>1961</td>
+      <td>Nonprofit Organization</td>
+      <td>Social Assistance</td>
+      <td>Non-Profit</td>
+      <td>$100 to $500 million (USD)</td>
+      <td>-1</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>Quality Data Analyst</td>
+      <td>$37K-$66K (Glassdoor est.)</td>
+      <td>Overview\n\nProvides analytical and technical ...</td>
+      <td>3.8</td>
+      <td>Visiting Nurse Service of New York\n3.8</td>
+      <td>New York, NY</td>
+      <td>New York, NY</td>
+      <td>10000+ employees</td>
+      <td>1893</td>
+      <td>Nonprofit Organization</td>
+      <td>Health Care Services &amp; Hospitals</td>
+      <td>Health Care</td>
+      <td>$2 to $5 billion (USD)</td>
+      <td>-1</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>Senior Data Analyst, Insights &amp; Analytics Team...</td>
+      <td>$37K-$66K (Glassdoor est.)</td>
+      <td>We’re looking for a Senior Data Analyst who ha...</td>
+      <td>3.4</td>
+      <td>Squarespace\n3.4</td>
+      <td>New York, NY</td>
+      <td>New York, NY</td>
+      <td>1001 to 5000 employees</td>
+      <td>2003</td>
+      <td>Company - Private</td>
+      <td>Internet</td>
+      <td>Information Technology</td>
+      <td>Unknown / Non-Applicable</td>
+      <td>GoDaddy</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>Data Analyst</td>
+      <td>$37K-$66K (Glassdoor est.)</td>
+      <td>Requisition NumberRR-0001939\nRemote:Yes\nWe c...</td>
+      <td>4.1</td>
+      <td>Celerity\n4.1</td>
+      <td>New York, NY</td>
+      <td>McLean, VA</td>
+      <td>201 to 500 employees</td>
+      <td>2002</td>
+      <td>Subsidiary or Business Segment</td>
+      <td>IT Services</td>
+      <td>Information Technology</td>
+      <td>$50 to $100 million (USD)</td>
+      <td>-1</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>Reporting Data Analyst</td>
+      <td>$37K-$66K (Glassdoor est.)</td>
+      <td>ABOUT FANDUEL GROUP\n\nFanDuel Group is a worl...</td>
+      <td>3.9</td>
+      <td>FanDuel\n3.9</td>
+      <td>New York, NY</td>
+      <td>New York, NY</td>
+      <td>501 to 1000 employees</td>
+      <td>2009</td>
+      <td>Company - Private</td>
+      <td>Sports &amp; Recreation</td>
+      <td>Arts, Entertainment &amp; Recreation</td>
+      <td>$100 to $500 million (USD)</td>
+      <td>DraftKings</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">freq</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'Type of ownership'</span><span class="p">])</span>
+</code></pre></div></div>
+
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Frequency</th>
+      <th>Percentage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Company - Private</th>
+      <td>1273</td>
+      <td>56.5%</td>
+    </tr>
+    <tr>
+      <th>Company - Public</th>
+      <td>452</td>
+      <td>20.1%</td>
+    </tr>
+    <tr>
+      <th>-1</th>
+      <td>163</td>
+      <td>7.2%</td>
+    </tr>
+    <tr>
+      <th>Nonprofit Organization</th>
+      <td>124</td>
+      <td>5.5%</td>
+    </tr>
+    <tr>
+      <th>Subsidiary or Business Segment</th>
+      <td>89</td>
+      <td>4.0%</td>
+    </tr>
+    <tr>
+      <th>Government</th>
+      <td>37</td>
+      <td>1.6%</td>
+    </tr>
+    <tr>
+      <th>College / University</th>
+      <td>34</td>
+      <td>1.5%</td>
+    </tr>
+    <tr>
+      <th>Hospital</th>
+      <td>19</td>
+      <td>0.8%</td>
+    </tr>
+    <tr>
+      <th>Unknown</th>
+      <td>16</td>
+      <td>0.7%</td>
+    </tr>
+    <tr>
+      <th>Other Organization</th>
+      <td>13</td>
+      <td>0.6%</td>
+    </tr>
+    <tr>
+      <th>Contract</th>
+      <td>11</td>
+      <td>0.5%</td>
+    </tr>
+    <tr>
+      <th>Private Practice / Firm</th>
+      <td>9</td>
+      <td>0.4%</td>
+    </tr>
+    <tr>
+      <th>School / School District</th>
+      <td>9</td>
+      <td>0.4%</td>
+    </tr>
+    <tr>
+      <th>Self-employed</th>
+      <td>2</td>
+      <td>0.1%</td>
+    </tr>
+    <tr>
+      <th>Franchise</th>
+      <td>2</td>
+      <td>0.1%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Copying original data frame to preserve from all incoming changes
+</span><span class="n">df2</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Filter 1 observation with value -1
+</span><span class="n">df2</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="n">df2</span><span class="p">[</span><span class="s">'Salary Estimate'</span><span class="p">]</span> <span class="o">!=</span> <span class="s">'-1'</span><span class="p">]</span>
+
+<span class="c1"># As we saw, every Salary Estimate is an interval
+# which we'll get the middle value of it.
+</span><span class="n">df2</span><span class="p">[</span><span class="s">'MiddleSalaryEstimate'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="s">'Salary Estimate'</span><span class="p">].</span><span class="nb">str</span><span class="p">.</span><span class="n">findall</span><span class="p">(</span><span class="s">"(\d+)K"</span><span class="p">)</span>\
+    <span class="p">.</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="o">*</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">x</span><span class="p">)]).</span><span class="n">mean</span><span class="p">())</span>
+    
+<span class="c1"># We can easily check the distribution
+</span><span class="n">df2</span><span class="p">[</span><span class="s">'MiddleSalaryEstimate'</span><span class="p">].</span><span class="n">hist</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><img src="http://localhost:4000/images/textproc/output_3_0.png" alt="png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">interval_5</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="s">'MiddleSalaryEstimate'</span><span class="p">].</span><span class="n">value_counts</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">5</span><span class="p">).</span><span class="n">index</span>
+<span class="n">df2</span><span class="p">[</span><span class="s">'MidSalEst_Bins'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">cut</span><span class="p">(</span><span class="n">df2</span><span class="p">[</span><span class="s">'MiddleSalaryEstimate'</span><span class="p">],</span> <span class="n">interval_5</span><span class="p">)</span>
+<span class="n">df2</span><span class="p">[</span><span class="s">'DescriptionLength'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="s">'Job Description'</span><span class="p">].</span><span class="nb">map</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+
+<span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df2</span><span class="p">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">'MidSalEst_Bins'</span><span class="p">).</span><span class="n">median</span><span class="p">()[</span><span class="s">'DescriptionLength'</span><span class="p">]).</span><span class="n">reset_index</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MidSalEst_Bins</th>
+      <th>DescriptionLength</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>(56.8, 80.1]</td>
+      <td>2814.5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>(33.383, 56.8]</td>
+      <td>2960.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>(80.1, 103.4]</td>
+      <td>3122.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>(103.4, 126.7]</td>
+      <td>2625.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>(126.7, 150.0]</td>
+      <td>2485.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>With that taken care of, we now have a target variable to predict.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pd</span><span class="p">.</span><span class="n">set_option</span><span class="p">(</span><span class="s">'display.max_rows'</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">states</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'Location'</span><span class="p">].</span><span class="nb">str</span><span class="p">.</span><span class="n">findall</span><span class="p">(</span><span class="s">",\s(\w{2})$"</span><span class="p">).</span><span class="nb">map</span><span class="p">(</span><span class="nb">max</span><span class="p">)</span>
+
+<span class="n">freq</span><span class="p">(</span><span class="n">states</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Location</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>CA</th>
+      <td>626</td>
+      <td>27.8%</td>
+    </tr>
+    <tr>
+      <th>TX</th>
+      <td>394</td>
+      <td>17.5%</td>
+    </tr>
+    <tr>
+      <th>NY</th>
+      <td>345</td>
+      <td>15.3%</td>
+    </tr>
+    <tr>
+      <th>IL</th>
+      <td>164</td>
+      <td>7.3%</td>
+    </tr>
+    <tr>
+      <th>PA</th>
+      <td>114</td>
+      <td>5.1%</td>
+    </tr>
+    <tr>
+      <th>AZ</th>
+      <td>97</td>
+      <td>4.3%</td>
+    </tr>
+    <tr>
+      <th>CO</th>
+      <td>96</td>
+      <td>4.3%</td>
+    </tr>
+    <tr>
+      <th>NC</th>
+      <td>90</td>
+      <td>4.0%</td>
+    </tr>
+    <tr>
+      <th>NJ</th>
+      <td>86</td>
+      <td>3.8%</td>
+    </tr>
+    <tr>
+      <th>WA</th>
+      <td>54</td>
+      <td>2.4%</td>
+    </tr>
+    <tr>
+      <th>VA</th>
+      <td>48</td>
+      <td>2.1%</td>
+    </tr>
+    <tr>
+      <th>OH</th>
+      <td>35</td>
+      <td>1.6%</td>
+    </tr>
+    <tr>
+      <th>UT</th>
+      <td>33</td>
+      <td>1.5%</td>
+    </tr>
+    <tr>
+      <th>FL</th>
+      <td>27</td>
+      <td>1.2%</td>
+    </tr>
+    <tr>
+      <th>IN</th>
+      <td>23</td>
+      <td>1.0%</td>
+    </tr>
+    <tr>
+      <th>DE</th>
+      <td>11</td>
+      <td>0.5%</td>
+    </tr>
+    <tr>
+      <th>GA</th>
+      <td>4</td>
+      <td>0.2%</td>
+    </tr>
+    <tr>
+      <th>SC</th>
+      <td>3</td>
+      <td>0.1%</td>
+    </tr>
+    <tr>
+      <th>KS</th>
+      <td>3</td>
+      <td>0.1%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df_barplot</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'Job Title'</span><span class="p">].</span><span class="n">value_counts</span><span class="p">().</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">df_barplot</span> <span class="o">=</span> <span class="n">df_barplot</span><span class="p">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s">'Job Title'</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">).</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+
+<span class="n">sns</span><span class="p">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_barplot</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">'index'</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s">'Job Title'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><img src="http://localhost:4000/images/textproc/output_7_0.png" alt="png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">np</span><span class="p">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="p">.</span><span class="n">Founded</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">).</span><span class="nb">sum</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>660
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="p">[</span><span class="s">'Job Description'</span><span class="p">].</span><span class="n">value_counts</span><span class="p">(</span><span class="n">BINS</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(1870.9, 3736.8]      933
+(-13.66, 1870.9]      609
+(3736.8, 5602.7]      511
+(5602.7, 7468.6]      140
+(7468.6, 9334.5]       42
+(9334.5, 11200.4]      11
+(11200.4, 13066.3]      3
+(16798.1, 18664.0]      2
+(13066.3, 14932.2]      2
+(14932.2, 16798.1]      0
+Name: Job Description, dtype: int64
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Cleaning Job Descriptions
+</span>
+<span class="n">df3</span> <span class="o">=</span> <span class="n">df2</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># removing special characters
+</span><span class="n">df3</span><span class="p">[</span><span class="s">'Job Description'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df3</span><span class="p">[</span><span class="s">'Job Description'</span><span class="p">].</span><span class="nb">map</span><span class="p">(</span><span class="n">remove_string_special_characters</span><span class="p">)</span>
+
+<span class="c1"># Tokenize
+</span><span class="n">tokenizer</span> <span class="o">=</span> <span class="n">RegexpTokenizer</span><span class="p">(</span><span class="s">r"\w+"</span><span class="p">)</span>
+<span class="n">df3</span><span class="p">[</span><span class="s">'Token_JobDesc'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df3</span><span class="p">[</span><span class="s">'Job Description'</span><span class="p">].</span><span class="nb">map</span><span class="p">(</span><span class="n">tokenizer</span><span class="p">.</span><span class="n">tokenize</span><span class="p">)</span>
+
+<span class="c1"># Stem, Remove stopwords and non english words
+</span><span class="n">stemmer</span> <span class="o">=</span> <span class="n">PorterStemmer</span><span class="p">()</span>
+<span class="n">df3</span><span class="p">[</span><span class="s">'Token_JobDesc'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df3</span><span class="p">[</span><span class="s">'Token_JobDesc'</span><span class="p">]</span>\
+    <span class="p">.</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">[</span>
+        <span class="n">stemmer</span><span class="p">.</span><span class="n">stem</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">x</span> 
+        <span class="k">if</span> <span class="n">w</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stopwords</span><span class="p">.</span><span class="n">words</span><span class="p">(</span><span class="s">'english'</span><span class="p">)</span>
+    <span class="p">])</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df3</span><span class="p">[</span><span class="s">'Token_JobDesc'</span><span class="p">]</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0       [eager, roll, sleev, har, data, drive, polici,...
+1       [overview, provid, analyt, technic, support, i...
+2       [look, senior, data, analyst, love, mentorship...
+3       [requisit, numberrr, remotey, collabor, creat,...
+4       [fanduel, group, fanduel, group, worldclass, t...
+                              ...                        
+2248    [maintain, system, protect, data, unauthor, us...
+2249    [posit, senior, data, analyst, corpor, audit, ...
+2250    [titl, technic, busi, analyst, sql, data, anal...
+2251    [summari, respons, work, crossfunct, collect, ...
+2252    [bring, bodi, mind, heart, spirit, work, senio...
+Name: Token_JobDesc, Length: 2252, dtype: object
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">np</span><span class="p">.</span><span class="n">where</span><span class="p">(</span><span class="n">df3</span><span class="p">[</span><span class="s">'Job Description'</span><span class="p">]</span><span class="o">==</span><span class="s">''</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">).</span><span class="nb">sum</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
+<span class="n">df3</span><span class="p">[</span><span class="s">'Job Description'</span><span class="p">].</span><span class="n">values</span>
+<span class="c1">#vectors = vectorizer.fit_transform()
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="p">[</span><span class="s">'Job Description'</span><span class="p">].</span><span class="nb">map</span><span class="p">(</span><span class="nb">len</span><span class="p">).</span><span class="n">hist</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;AxesSubplot:&gt;
+</code></pre></div></div>
+
+<p><img src="http://localhost:4000/images/textproc/output_16_1.png" alt="png" /></p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/tags/#data-science" class="page__taxonomy-item" rel="tag">data science</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#feature-engineering" class="page__taxonomy-item" rel="tag">feature engineering</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#text-processing" class="page__taxonomy-item" rel="tag">text processing</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Atualizado em:</strong> <time datetime="2020-08-01T00:00:00-03:00">August 01, 2020</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Compartilhe em</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Text+Processing%20http%3A%2F%2Flocalhost%3A4000%2Ftextproc%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe em Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Ftextproc%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe em Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Ftextproc%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe em Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Ftextproc%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartilhe em LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">Talvez você goste também</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/textproc/" rel="permalink">Text Processing
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minuto(s) de leitura
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Feature Engineering, Data Science, Text Processing
+</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Acompanhe em</strong></li>
+    
+    
+    
+    
+      <li><a href="https://github.com/filipewds"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="http://localhost:4000/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Filipe Wanderly. Feito com <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="http://localhost:4000/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+  </body>
+</html>

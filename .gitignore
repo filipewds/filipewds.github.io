@@ -1,0 +1,3 @@
+# bundle files to serve
+vendor/
+.bundle
